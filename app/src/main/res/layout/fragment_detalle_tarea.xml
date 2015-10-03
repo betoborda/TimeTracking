@@ -9,8 +9,9 @@
     tools:context="pe.com.bitsolutions.dailytime.timetracking.fragments.DetalleTareaActivityFragment">
 
     <TextView
+        android:id="@+id/nombre_tarea_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        />
 
 </RelativeLayout>
