@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 getString(R.string.pref_location_default));
 
         Logging.v(LOG_TAG, locationSaved);
-        Toast.makeText(this, locationSaved, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, locationSaved, Toast.LENGTH_SHORT).show();
 
     }
 
