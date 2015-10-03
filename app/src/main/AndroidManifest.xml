@@ -28,6 +28,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pe.com.bitsolutions.dailytime.timetracking.activities.MainActivity" />
         </activity>
+        
+        <provider
+            android:authorities="pe.com.bitsolutions.dailytime"
+            android:name=".data.TareaProvider" />
+
     </application>
 
 </manifest>
