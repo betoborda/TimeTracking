@@ -1,11 +1,27 @@
-package pe.com.bitsolutions.dailytime.timetracking;
+package pe.com.bitsolutions.dailytime.timetracking.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import pe.com.bitsolutions.dailytime.timetracking.R;
+import pe.com.bitsolutions.dailytime.timetracking.tools.Logging;
+
 public class MainActivity extends AppCompatActivity {
+
+    String LOG_TAG = MainActivity.class.getSimpleName();
+    @Override
+    protected void onStart() {
+        Logging.v(LOG_TAG, "En el metodo onStart");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        Logging.v(LOG_TAG, "En el metodo onResume");
+        super.onResume();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
