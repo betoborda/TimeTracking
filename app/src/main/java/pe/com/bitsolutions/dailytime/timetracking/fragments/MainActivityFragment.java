@@ -1,5 +1,6 @@
 package pe.com.bitsolutions.dailytime.timetracking.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import pe.com.bitsolutions.dailytime.timetracking.R;
+import pe.com.bitsolutions.dailytime.timetracking.activities.DetalleTareaActivity;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -61,9 +63,13 @@ public class MainActivityFragment extends Fragment {
         listaDeTareas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String tarea = mtareaAdapter.getItem(position);
+                String tareaNombre = mtareaAdapter.getItem(position);
 
-                Toast.makeText(getActivity(), "Selecciono " + tarea, Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Selecciono " + tareaNombre, Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getActivity(), DetalleTareaActivity.class);
+                intent.putExtra(Intent.EXTRA_TEXT, tareaNombre);
+                startActivity(intent);
             }
         });
 

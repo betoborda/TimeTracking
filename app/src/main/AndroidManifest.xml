@@ -20,6 +20,14 @@
             android:name=".activities.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
+        <activity
+            android:name=".activities.DetalleTareaActivity"
+            android:label="@string/title_activity_detalle_tarea"
+            android:parentActivityName=".activities.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pe.com.bitsolutions.dailytime.timetracking.activities.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
