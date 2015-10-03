@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
  */
 public class TareaContract {
 
-    public static final class TareaColumns implements BaseColumns{
+    public static final class TareaEstructura implements BaseColumns{
 
         public static final String NOMBRE_TABLA = "tarea";
 
