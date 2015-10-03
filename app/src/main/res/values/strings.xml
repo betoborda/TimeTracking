@@ -8,4 +8,5 @@
     <string name="action_cerrar_sesion">Cerrar Sesión</string>
     <string name="title_activity_detalle_tarea">DetalleTareaActivity</string>
 
+    <string name="action_compartir">Compatir</string>
 </resources>
