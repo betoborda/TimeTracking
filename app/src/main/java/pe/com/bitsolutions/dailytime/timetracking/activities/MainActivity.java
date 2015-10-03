@@ -1,9 +1,13 @@
 package pe.com.bitsolutions.dailytime.timetracking.activities;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import pe.com.bitsolutions.dailytime.timetracking.R;
 import pe.com.bitsolutions.dailytime.timetracking.tools.Logging;
@@ -21,12 +25,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         Logging.v(LOG_TAG, "En el metodo onResume");
         super.onResume();
+
+
+
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences sharedPrefs =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        String locationSaved = sharedPrefs.getString(
+                getString(R.string.pref_location_key),
+                getString(R.string.pref_location_default));
+
+        Logging.v(LOG_TAG, locationSaved);
+        Toast.makeText(this, locationSaved, Toast.LENGTH_LONG).show();
+
     }
 
 
@@ -46,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
 
